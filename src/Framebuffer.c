@@ -48,7 +48,7 @@ void framebuffer_set(
 
     if (x < 0 ||
         x >= framebuffer->width ||
-        y < y ||
+        y < 0 ||
         y >= framebuffer->height
     ) {
         return;

@@ -2,11 +2,11 @@
 
 #include <stdint.h>
 
-typedef struct Framebuffer{
+typedef struct {
     uint32_t* pixels;
     int width;
     int height;
-};
+} Framebuffer;
 
 int framebuffer_create(
     Framebuffer* framebuffer,
@@ -22,5 +22,10 @@ void framebuffer_set(
     Framebuffer* framebuffer,
     int x,
     int y,
+    uint32_t color
+);
+
+void framebuffer_clear(
+    Framebuffer *framebuffer,
     uint32_t color
 );
